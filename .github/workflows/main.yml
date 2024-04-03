@@ -1,0 +1,34 @@
+name: Node.js CI con Pruebas de Seguridad
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Usar Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '14'
+
+    - name: Instalar dependencias
+      run: npm install
+
+    - name: Ejecutar pruebas unitarias
+      run: npm test
+
+    - name: Chequeo de Seguridad de Dependencias
+      run: npm audit
+
+    # Ejemplo de cómo integrar una herramienta de escaneo de secretos
+    # Sustituye con una herramienta real y su comando específico
+    - name: Escaneo de Secretos
+      run: echo "Aquí se ejecutaría un escaneo de secretos en el código"
+
+    # Ejemplo de integración de una herramienta de análisis estático de código
+    # Sustituye con una herramienta real y su comando específico
+    - name: Análisis Estático de Código
+      run: echo "Aquí se ejecutaría una herramienta de análisis estático de código"
