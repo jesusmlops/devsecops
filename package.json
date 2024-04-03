@@ -4,7 +4,7 @@
   "description": "Un proyecto de prueba para demostrar CI/CD con GitHub Actions",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
     "test": "echo \"No hay pruebas definidas\" && exit 0"
   },
   "dependencies": {
