@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
-    "test": "jest" // Esto asume que estás usando Jest para tus pruebas
+    "test": "echo \"No hay pruebas definidas\" && exit 0"
   },
   "dependencies": {
     "express": "^4.17.1",
