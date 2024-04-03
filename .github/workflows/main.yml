@@ -9,10 +9,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Usar Node.js
+    - name: Usar Node.js 20
       uses: actions/setup-node@v1
       with:
-        node-version: '14'
+        node-version: '20'
 
     - name: Instalar dependencias
       run: npm install
